@@ -8,6 +8,9 @@ import {
   NavLogo,
   NavIcon,
   HamburgerMenu,
+  NavMenu,
+  NavItem,
+  NavLinks,
 } from './Navbar.elements';
 
 const Navbar = () => {
@@ -26,6 +29,20 @@ const Navbar = () => {
             {/* use Ternary operator if clicked use FaTimes */}
             {click ? <FaTimes /> : <FaBars />}
           </HamburgerMenu>
+          <NavMenu onClick={handleonClick} click={click}>
+            <NavItem>
+              <NavLinks to="/">Home</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="/services">Services</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="/products">Products</NavLinks>
+            </NavItem>
+            {/* <NavButton>
+              {button ? ()}
+            </NavButton> */}
+          </NavMenu>
         </NavContainer>
       </Nav>
     </>
