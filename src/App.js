@@ -1,10 +1,16 @@
 import React from 'react';
-import { Navbar } from './components';
+import GlobalStyle from './globalStyles';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import './App.css';
 
 function App() {
   return (
     <div>
-      <Navbar />
+      <Router>
+        <GlobalStyle />
+        <Navbar />
+      </Router>
     </div>
   );
 }

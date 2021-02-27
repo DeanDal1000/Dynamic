@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Container } from '../globalStyles';
+import { Link } from 'react-router-dom';
+import { SiDynamics365 } from 'react-icons/si';
 
 export const Nav = styled.nav`
   background: #101522;
@@ -20,4 +22,32 @@ export const NavContainer = styled(Container)`
   height: 80px;
 
   ${Container}
+`;
+
+export const NavLogo = styled(Link)`
+  color: #fff;
+  justify-self: flex-start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+`;
+
+export const NavIcon = styled(SiDynamics365)`
+  margin-right: 0.5rem;
+  color: white;
+`;
+
+export const HamburgerMenu = styled.div`
+  display: none;
+  @media screen and (max-width: 2000px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
 `;
