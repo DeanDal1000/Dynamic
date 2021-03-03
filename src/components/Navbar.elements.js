@@ -108,3 +108,20 @@ export const NavLinks = styled(Link)`
     }
   }
 `;
+
+export const NavButton = styled.li`
+  @media screen and (max-width: 960px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 110px;
+  }
+`;
+
+export const ButtonLink = styled(Link)`
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  height: 100px;
+`;
